@@ -18,7 +18,8 @@ public class AddressController {
     public List<Address> getAddresses(@RequestParam(required = false) String name) {
 
         if(name == null){
-            return (List<Address>) ResponseEntity.ok(addressService.getAddresses());
+            // return (List<Address>) ResponseEntity.ok(addressService.getAddresses());
+            return addressService.getAddresses();
         }
 
         List<Address> foundAddress = new ArrayList<Address>();
@@ -36,9 +37,8 @@ public class AddressController {
     }
 
     @PostMapping("/address")
-    public Address addNewAddress(@RequestBody Address address){
+    public void addNewAddress(@RequestBody Address address){
         addressService.addNewAddress(address);
-        return address;
     }
 
     @GetMapping("/static-address")

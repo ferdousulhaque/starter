@@ -27,8 +27,8 @@ public class AddressService {
         return null;
     }
 
-    public Boolean addNewAddress(Address address){
-        return listOfAddresses.add(address);
+    public void addNewAddress(Address address){
+        listOfAddresses.add(address);
     }
 
 }
