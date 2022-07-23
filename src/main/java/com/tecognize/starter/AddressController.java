@@ -16,7 +16,7 @@ public class AddressController {
 
     @GetMapping("/address")
     public List<Address> getAddresses(@RequestParam(required = false) String name) {
-
+    //    ResponseEntity<List<Address>>
         if(name == null){
             // return (List<Address>) ResponseEntity.ok(addressService.getAddresses());
             return addressService.getAddresses();
