@@ -3,8 +3,17 @@ package com.tecognize.starter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+//@Component
+@Entity
 public class Address {
+
+    @Id
+    @GeneratedValue
+    private Integer Id;
     private String name;
     private String address;
 
